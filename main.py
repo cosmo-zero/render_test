@@ -2,6 +2,10 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/")
+@app.route("/")
 def index():
     return "Hello world"
+
+@app.route("/main")
+def main():
+    return "main"
