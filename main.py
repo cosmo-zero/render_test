@@ -10,3 +10,7 @@ def before_request():
 def index():
     ip_address = request.remote_addr
     return f"Your IP address is: {ip_address}"
+
+@app.route("/alive")
+def alive():
+    return "alive"
